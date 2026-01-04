@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Feed - Pixl</title>
+</head>
+<body class="h-dvh overflow-clip flex gap-16 px-4 bg-pixl-dark text-pixl-light">
+  <!-- Navigation (left column) -->
+  <header class="flex-1 shrink-0 my-4 pl-4 xl:ml-40">
+    <a href="/index.html" aria-label="Home">
+      <svg class="h-8 w-auto" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <!-- P (white) -->
+        <rect x="0" y="2" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="4" y="2" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="8" y="2" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="12" y="2" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="0" y="6" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="12" y="6" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="0" y="10" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="4" y="10" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="8" y="10" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="12" y="10" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="0" y="14" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="0" y="18" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="0" y="22" width="4" height="4" fill="#EEEEEE"/>
+        
+        <!-- I (white) -->
+        <rect x="20" y="2" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="24" y="2" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="28" y="2" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="24" y="6" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="24" y="10" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="24" y="14" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="24" y="18" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="20" y="22" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="24" y="22" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="28" y="22" width="4" height="4" fill="#EEEEEE"/>
+        
+        <!-- X (golden-orange) -->
+        <rect x="36" y="2" width="4" height="4" fill="#ECA749"/>
+        <rect x="48" y="2" width="4" height="4" fill="#ECA749"/>
+        <rect x="40" y="6" width="4" height="4" fill="#ECA749"/>
+        <rect x="44" y="6" width="4" height="4" fill="#ECA749"/>
+        <rect x="40" y="10" width="4" height="4" fill="#ECA749"/>
+        <rect x="44" y="10" width="4" height="4" fill="#ECA749"/>
+        <rect x="40" y="14" width="4" height="4" fill="#ECA749"/>
+        <rect x="44" y="14" width="4" height="4" fill="#ECA749"/>
+        <rect x="40" y="18" width="4" height="4" fill="#ECA749"/>
+        <rect x="44" y="18" width="4" height="4" fill="#ECA749"/>
+        <rect x="36" y="22" width="4" height="4" fill="#ECA749"/>
+        <rect x="48" y="22" width="4" height="4" fill="#ECA749"/>
+        
+        <!-- L (white) -->
+        <rect x="56" y="2" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="56" y="6" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="56" y="10" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="56" y="14" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="56" y="18" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="56" y="22" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="60" y="22" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="64" y="22" width="4" height="4" fill="#EEEEEE"/>
+        <rect x="68" y="22" width="4" height="4" fill="#EEEEEE"/>
+      </svg>
+    </a>
+
+    <nav class="pt-10">
+      <ul class="flex flex-col gap-3">
+        <!-- Active item -->
+        <li class="nav-item flex items-center -ml-4">
+          <span class="nav-indicator w-2 h-2 bg-pixl shrink-0 mr-2.5" aria-hidden="true"></span>
+          <a href="/feed.html" class="nav-link font-medium hover:underline active">For you</a>
+        </li>
+
+        <!-- Other items -->
+        <li class="nav-item flex items-center -ml-4">
+          <span class="nav-indicator w-2 h-2 mr-2.5 opacity-0" aria-hidden="true"></span>
+          <a href="#" class="nav-link hover:underline">Following</a>
+        </li>
+
+        <li class="nav-item flex items-center -ml-4">
+          <span class="nav-indicator w-2 h-2 mr-2.5 opacity-0" aria-hidden="true"></span>
+          <a href="#" class="nav-link hover:underline">Notifications</a>
+        </li>
+
+        <li class="nav-item flex items-center -ml-4">
+          <span class="nav-indicator w-2 h-2 mr-2.5 opacity-0" aria-hidden="true"></span>
+          <a href="#" class="nav-link hover:underline">Bookmarks</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content (center column, scrollable) -->
+  <main class="grow flex flex-col items-center overflow-y-auto py-4 px-8">
+    <div class="flex flex-col gap-4 w-full max-w-2xl">
+      <!-- Top navigation -->
+      <nav aria-label="main feed navigation" class="overflow-y-auto">
+        <ul class="flex justify-end gap-8 text-sm">
+          <li><a href="#" class="text-pixl">For you</a></li>
+          <li><a href="#" class="text-pixl-light/60 hover:text-pixl-light/80">Idea streams</a></li>
+          <li><a href="#" class="text-pixl-light/60 hover:text-pixl-light/80">Following</a></li>
+        </ul>
+      </nav>
+
+      <!-- Post prompt -->
+      <div class="flex items-start gap-4 mt-8 border-b border-pixl-light/10 pb-4">
+        <!-- Avatar -->
+        <a href="/profile" class="shrink-0">
+          <img src="/images/image1.jpg" alt="Avatar for Adrian" class="w-10 h-10 object-cover rounded-full" />
+        </a>
+
+        <!-- Form -->
+        <form action="#" method="POST" class="flex-grow">
+          <label for="post" class="sr-only">Post body</label>
+
+          <textarea
+            id="post"
+            name="post"
+            placeholder="What's up Adrian?"
+            class="w-full text-lg resize-none rounded border border-pixl-light/10 bg-transparent px-3 py-2 text-pixl-light placeholder:text-pixl-light/60 focus:outline-none"
+            rows="3"
+          ></textarea>
+
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex items-center gap-4">
+              <button type="button" class="px-2 py-1 inline-flex items-center justify-center">
+                <svg viewBox="0 0 24 24" class="w-6 h-auto text-pixl-light/60" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </button>
+              <button type="button" class="px-2 py-1 inline-flex items-center justify-center">
+                <svg viewBox="0 0 24 24" class="w-6 h-auto text-pixl-light/60" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+              </button>
+            </div>
+
+            <button type="submit" class="px-4 py-1 text-sm bg-pixl border border-pixl-light/20 text-pixl-dark rounded">Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Sidebar (right column) -->
+  <aside class="flex-1 shrink-0 overflow-y-auto px-2 my-4">
+    <!-- Search input -->
+    <div class="mb-4">
+      <input
+        type="search"
+        placeholder="Search an ID or pixel"
+        class="w-full text-sm bg-transparent placeholder:text-pixl-light/60 focus:outline-none"
+      />
+      <hr class="border-pixl-light/10 mt-2" />
+    </div>
+
+    <!-- Artists to follow box -->
+    <div class="mt-4 border border-pixl-light/10 p-4 rounded">
+      <h2 class="text-sm text-pixl-light/60">Artists to follow</h2>
+
+      <ol class="mt-4 flex flex-col gap-4">
+        <li class="flex items-center justify-between">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <img src="/images/image1.jpg" alt="Alessia" class="w-8 h-8 rounded-full object-cover" />
+            <div class="text-sm truncate min-w-0">AliciaDraws_verylongname</div>
+          </div>
+          <button class="px-2 py-1 text-sm bg-pixl border border-pixl-light/20 text-pixl-dark rounded">Follow</button>
+        </li>
+        <li class="flex items-center justify-between">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <img src="/images/image2.jpg" alt="Artist" class="w-8 h-8 rounded-full object-cover" />
+            <div class="text-sm truncate min-w-0">PixelArtist123</div>
+          </div>
+          <button class="px-2 py-1 text-sm bg-pixl border border-pixl-light/20 text-pixl-dark rounded">Follow</button>
+        </li>
+        <li class="flex items-center justify-between">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <img src="/images/image3.jpg" alt="Artist" class="w-8 h-8 rounded-full object-cover" />
+            <div class="text-sm truncate min-w-0">DesignMaster_verylongusername</div>
+          </div>
+          <button class="px-2 py-1 text-sm bg-pixl border border-pixl-light/20 text-pixl-dark rounded">Follow</button>
+        </li>
+      </ol>
+
+      <a class="inline-block text-sm text-pixl-light/60 mt-4" href="#">Show more</a>
+    </div>
+
+    <!-- Idea streams box -->
+    <div class="mt-4 border border-pixl-light/10 p-4 rounded">
+      <h2 class="text-sm text-pixl-light/60">Follow idea streams</h2>
+
+      <ol class="mt-4 flex flex-col gap-4">
+        <li class="flex items-center justify-between">
+          <p class="text-sm truncate min-w-0">Breaking Design Ideas & Examples</p>
+          <button class="px-2 py-0.5 text-2xl leading-none text-pixl" aria-label="Follow idea stream">+</button>
+        </li>
+        <li class="flex items-center justify-between">
+          <p class="text-sm truncate min-w-0">Pixel Art Techniques</p>
+          <button class="px-2 py-0.5 text-2xl leading-none text-pixl" aria-label="Follow idea stream">+</button>
+        </li>
+        <li class="flex items-center justify-between">
+          <p class="text-sm truncate min-w-0">Creative Coding Projects</p>
+          <button class="px-2 py-0.5 text-2xl leading-none text-pixl" aria-label="Follow idea stream">+</button>
+        </li>
+        <li class="flex items-center justify-between">
+          <p class="text-sm truncate min-w-0">Digital Art Inspiration</p>
+          <button class="px-2 py-0.5 text-2xl leading-none text-pixl" aria-label="Follow idea stream">+</button>
+        </li>
+      </ol>
+    </div>
+  </aside>
+
+  <script>
+    // Handle navigation active state
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          // Prevent default navigation for demo purposes
+          e.preventDefault();
+          
+          // Remove active state from all items
+          navLinks.forEach(l => {
+            l.classList.remove('active', 'font-medium');
+            l.removeAttribute('aria-current');
+          });
+          
+          // Hide all indicators
+          const allIndicators = document.querySelectorAll('.nav-indicator');
+          allIndicators.forEach(indicator => {
+            indicator.classList.remove('bg-pixl');
+            indicator.classList.add('opacity-0');
+          });
+          
+          // Add active state to clicked item
+          this.classList.add('active', 'font-medium');
+          this.setAttribute('aria-current', 'page');
+          
+          // Show indicator for clicked item
+          const indicator = this.parentElement.querySelector('.nav-indicator');
+          if (indicator) {
+            indicator.classList.add('bg-pixl');
+            indicator.classList.remove('opacity-0');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+

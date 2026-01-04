@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="/styles.css" />
   <title>Pixl</title>
 </head>
-<body class="relative h-dvh w-full overflow-clip bg-pixl-dark text-pixl-light">
+<body class="relative flex flex-col md:block min-h-screen md:h-dvh w-full md:overflow-clip bg-pixl-dark text-pixl-light">
   <!-- Background image: full-surface, cropped, offset -->
-  <div class="absolute inset-0 overflow-clip">
+  <div class="fixed inset-0 overflow-clip">
     <img
       src="/images/official-login-bg.jpg"
       alt="Background"
@@ -24,95 +24,140 @@
   </div>
 
   <!-- Content wrapper (make room for the footer band) -->
-  <main class="isolate min-h-screen">
+  <main class="isolate flex-grow min-h-screen overflow-clip">
     <!-- Centered wrapper -->
     <div class="grid place-items-center min-h-screen">
       <!-- Content container -->
-      <div class="flex justify-between items-center gap-16 w-full max-w-[1000px] mx-auto px-8">
-        <!-- Left panel - Logo and word mark -->
-        <div class="flex items-baseline gap-3">
-          <!-- Pixel logo (SVG) - PIXL in clean pixelated style -->
-          <svg class="w-36" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg">
-            <!-- P (white) -->
-            <rect x="0" y="2" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="4" y="2" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="8" y="2" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="12" y="2" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="0" y="6" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="12" y="6" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="0" y="10" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="4" y="10" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="8" y="10" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="12" y="10" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="0" y="14" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="0" y="18" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="0" y="22" width="4" height="4" fill="#EEEEEE"/>
-            
-            <!-- I (white) -->
-            <rect x="20" y="2" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="24" y="2" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="28" y="2" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="24" y="6" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="24" y="10" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="24" y="14" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="24" y="18" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="20" y="22" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="24" y="22" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="28" y="22" width="4" height="4" fill="#EEEEEE"/>
-            
-            <!-- X (golden-orange) -->
-            <rect x="36" y="2" width="4" height="4" fill="#ECA749"/>
-            <rect x="48" y="2" width="4" height="4" fill="#ECA749"/>
-            <rect x="40" y="6" width="4" height="4" fill="#ECA749"/>
-            <rect x="44" y="6" width="4" height="4" fill="#ECA749"/>
-            <rect x="40" y="10" width="4" height="4" fill="#ECA749"/>
-            <rect x="44" y="10" width="4" height="4" fill="#ECA749"/>
-            <rect x="40" y="14" width="4" height="4" fill="#ECA749"/>
-            <rect x="44" y="14" width="4" height="4" fill="#ECA749"/>
-            <rect x="40" y="18" width="4" height="4" fill="#ECA749"/>
-            <rect x="44" y="18" width="4" height="4" fill="#ECA749"/>
-            <rect x="36" y="22" width="4" height="4" fill="#ECA749"/>
-            <rect x="48" y="22" width="4" height="4" fill="#ECA749"/>
-            
-            <!-- L (white) -->
-            <rect x="56" y="2" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="56" y="6" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="56" y="10" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="56" y="14" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="56" y="18" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="56" y="22" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="60" y="22" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="64" y="22" width="4" height="4" fill="#EEEEEE"/>
-            <rect x="68" y="22" width="4" height="4" fill="#EEEEEE"/>
-          </svg>
-          
-          <!-- Placeholder for the word "stack" -->
-          <div class="word-stack text-pixl text-2xl">Word Stack</div>
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-8 md:gap-16 w-full max-w-[1000px] mx-auto px-4 md:px-8">
+        <!-- Left panel - Logo and word stack -->
+        <div class="left-column text-pixl text-2xl md:text-4xl uppercase relative flex items-center md:items-baseline gap-3 justify-center md:justify-start">
+          <!-- Logo (SVG) aligned with anchor word baseline -->
+          <div class="logo">
+            <svg class="w-24 md:w-36" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg">
+              <!-- P (white) -->
+              <rect x="0" y="2" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="4" y="2" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="8" y="2" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="12" y="2" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="0" y="6" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="12" y="6" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="0" y="10" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="4" y="10" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="8" y="10" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="12" y="10" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="0" y="14" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="0" y="18" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="0" y="22" width="4" height="4" fill="#EEEEEE"/>
+              
+              <!-- I (white) -->
+              <rect x="20" y="2" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="24" y="2" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="28" y="2" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="24" y="6" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="24" y="10" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="24" y="14" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="24" y="18" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="20" y="22" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="24" y="22" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="28" y="22" width="4" height="4" fill="#EEEEEE"/>
+              
+              <!-- X (golden-orange) -->
+              <rect x="36" y="2" width="4" height="4" fill="#ECA749"/>
+              <rect x="48" y="2" width="4" height="4" fill="#ECA749"/>
+              <rect x="40" y="6" width="4" height="4" fill="#ECA749"/>
+              <rect x="44" y="6" width="4" height="4" fill="#ECA749"/>
+              <rect x="40" y="10" width="4" height="4" fill="#ECA749"/>
+              <rect x="44" y="10" width="4" height="4" fill="#ECA749"/>
+              <rect x="40" y="14" width="4" height="4" fill="#ECA749"/>
+              <rect x="44" y="14" width="4" height="4" fill="#ECA749"/>
+              <rect x="40" y="18" width="4" height="4" fill="#ECA749"/>
+              <rect x="44" y="18" width="4" height="4" fill="#ECA749"/>
+              <rect x="36" y="22" width="4" height="4" fill="#ECA749"/>
+              <rect x="48" y="22" width="4" height="4" fill="#ECA749"/>
+              
+              <!-- L (white) -->
+              <rect x="56" y="2" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="56" y="6" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="56" y="10" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="56" y="14" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="56" y="18" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="56" y="22" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="60" y="22" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="64" y="22" width="4" height="4" fill="#EEEEEE"/>
+              <rect x="68" y="22" width="4" height="4" fill="#EEEEEE"/>
+            </svg>
+          </div>
+
+          <!-- Word stack wrapper: relative so top/bottom can be absolute -->
+          <div class="word-stack relative hidden md:block" aria-hidden="true">
+            <!-- Top words: absolutely positioned so bottom sits at anchor top -->
+            <div class="top absolute bottom-full left-0 w-full mb-2">
+              <div class="flex flex-col gap-2 opacity-20">
+                <!-- Optional nested substack for 10% words -->
+                <div class="flex flex-col gap-2 opacity-50">
+                  <div>WRITER</div>
+                  <div>CODER</div>
+                </div>
+                <div>ART</div>
+                <div>WRITER</div>
+                <div>CODER</div>
+                <div>ART</div>
+                <div>WRITER</div>
+                <div>CODER</div>
+                <div>ART</div>
+                <div>WRITER</div>
+                <div>CODER</div>
+              </div>
+            </div>
+
+            <!-- Anchor word: baseline-aligned with the logo -->
+            <div class="anchor">everyone</div>
+
+            <!-- Bottom words: absolutely positioned so top sits at anchor bottom -->
+            <div class="bottom absolute top-full left-0 w-full mt-2">
+              <div class="flex flex-col gap-2 opacity-20">
+                <div>WRITER</div>
+                <div>CODER</div>
+                <div>ART</div>
+                <div class="flex flex-col gap-2 opacity-50">
+                  <div>WRITER</div>
+                  <div>CODER</div>
+                </div>
+                <div>ART</div>
+                <div>WRITER</div>
+                <div>CODER</div>
+                <div>ART</div>
+                <div>WRITER</div>
+                <div>CODER</div>
+                <div>ART</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Right panel - Sign in / Sign up -->
-        <div class="right-panel w-[20rem] max-w-full pb-16">
-          <h1 class="text-pixl text-3xl">Main headline</h1>
+        <div class="right-panel w-full md:w-72 max-w-full pb-16">
+          <h1 class="text-pixl text-2xl sm:text-3xl md:text-4xl text-center md:text-left">Main headline</h1>
 
-          <div class="mt-16 flex flex-col gap-3 text-center">
+          <div class="mt-8 md:mt-16 flex flex-col gap-3 text-center">
             <!-- Social sign-in buttons -->
-            <a href="#" class="block w-64 mx-auto bg-pixl-dark/50 border border-pixl/50 px-4 py-1.5 text-pixl text-center hover:bg-pixl-dark/60 active:bg-pixl-dark/75 hover:border-pixl/60 active:border-pixl/75">
+            <a href="/feed.html" class="block w-full md:w-64 mx-auto bg-pixl-dark/50 border border-pixl/50 px-4 py-1.5 text-pixl text-center hover:bg-pixl-dark/60 active:bg-pixl-dark/75 hover:border-pixl/60 active:border-pixl/75">
               Sign in with Google
             </a>
-            <a href="#" class="block w-64 mx-auto bg-pixl-dark/50 border border-pixl/50 px-4 py-1.5 text-pixl text-center hover:bg-pixl-dark/60 active:bg-pixl-dark/75 hover:border-pixl/60 active:border-pixl/75">
+            <a href="/feed.html" class="block w-full md:w-64 mx-auto bg-pixl-dark/50 border border-pixl/50 px-4 py-1.5 text-pixl text-center hover:bg-pixl-dark/60 active:bg-pixl-dark/75 hover:border-pixl/60 active:border-pixl/75">
               Sign in with Apple
             </a>
 
             <p class="text-sm">or</p>
 
             <!-- Primary CTA -->
-            <a href="#" class="block w-64 mx-auto bg-pixl border border-transparent px-4 py-1.5 text-pixl-dark text-center hover:bg-pixl/90 active:bg-pixl/95">
+            <a href="/feed.html" class="block w-full md:w-64 mx-auto bg-pixl border border-transparent px-4 py-1.5 text-pixl-dark text-center hover:bg-pixl/90 active:bg-pixl/95">
               Create an account
             </a>
 
             <!-- Sign in link -->
             <p class="mt-6 text-left text-sm">
-              Already have an account? <a href="#" class="text-pixl">Sign in</a>
+              Already have an account? <a href="/feed.html" class="text-pixl">Sign in</a>
             </p>
           </div>
         </div>
@@ -121,7 +166,7 @@
   </main>
 
   <!-- Fixed footer and animated "white noise" band -->
-  <footer class="fixed bottom-0 inset-x-0 z-30">
+  <footer class="md:fixed md:bottom-0 md:inset-x-0 z-30 w-full">
     <div class="flex flex-col items-center gap-1.5 pb-8">
       <p class="text-pixl/50 text-sm">Some short footer headline</p>
       <p class="text-pixl/50 text-xs opacity-50">Secondary footer text</p>

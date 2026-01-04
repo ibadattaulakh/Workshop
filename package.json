@@ -12,8 +12,10 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "vite": "^7.3.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.1.18",
-    "@tailwindcss/vite": "^4.1.18"
+    "vite": "^7.3.0"
   }
 }
