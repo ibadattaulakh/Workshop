@@ -24,8 +24,100 @@
   </div>
 
   <!-- Content wrapper (make room for the footer band) -->
-  <main class="relative z-10 p-4 pb-12">
-    <!-- Login content goes here -->
+  <main class="isolate min-h-screen">
+    <!-- Centered wrapper -->
+    <div class="grid place-items-center min-h-screen">
+      <!-- Content container -->
+      <div class="flex justify-between items-center gap-16 w-full max-w-[1000px] mx-auto px-8">
+        <!-- Left panel - Logo and word mark -->
+        <div class="flex items-baseline gap-3">
+          <!-- Pixel logo (SVG) - PIXL in clean pixelated style -->
+          <svg class="w-36" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg">
+            <!-- P (white) -->
+            <rect x="0" y="2" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="4" y="2" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="8" y="2" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="12" y="2" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="0" y="6" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="12" y="6" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="0" y="10" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="4" y="10" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="8" y="10" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="12" y="10" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="0" y="14" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="0" y="18" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="0" y="22" width="4" height="4" fill="#EEEEEE"/>
+            
+            <!-- I (white) -->
+            <rect x="20" y="2" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="24" y="2" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="28" y="2" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="24" y="6" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="24" y="10" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="24" y="14" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="24" y="18" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="20" y="22" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="24" y="22" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="28" y="22" width="4" height="4" fill="#EEEEEE"/>
+            
+            <!-- X (golden-orange) -->
+            <rect x="36" y="2" width="4" height="4" fill="#ECA749"/>
+            <rect x="48" y="2" width="4" height="4" fill="#ECA749"/>
+            <rect x="40" y="6" width="4" height="4" fill="#ECA749"/>
+            <rect x="44" y="6" width="4" height="4" fill="#ECA749"/>
+            <rect x="40" y="10" width="4" height="4" fill="#ECA749"/>
+            <rect x="44" y="10" width="4" height="4" fill="#ECA749"/>
+            <rect x="40" y="14" width="4" height="4" fill="#ECA749"/>
+            <rect x="44" y="14" width="4" height="4" fill="#ECA749"/>
+            <rect x="40" y="18" width="4" height="4" fill="#ECA749"/>
+            <rect x="44" y="18" width="4" height="4" fill="#ECA749"/>
+            <rect x="36" y="22" width="4" height="4" fill="#ECA749"/>
+            <rect x="48" y="22" width="4" height="4" fill="#ECA749"/>
+            
+            <!-- L (white) -->
+            <rect x="56" y="2" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="56" y="6" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="56" y="10" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="56" y="14" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="56" y="18" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="56" y="22" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="60" y="22" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="64" y="22" width="4" height="4" fill="#EEEEEE"/>
+            <rect x="68" y="22" width="4" height="4" fill="#EEEEEE"/>
+          </svg>
+          
+          <!-- Placeholder for the word "stack" -->
+          <div class="word-stack text-pixl text-2xl">Word Stack</div>
+        </div>
+
+        <!-- Right panel - Sign in / Sign up -->
+        <div class="right-panel w-[20rem] max-w-full pb-16">
+          <h1 class="text-pixl text-3xl">Main headline</h1>
+
+          <div class="mt-16 flex flex-col gap-3 text-center">
+            <!-- Social sign-in buttons -->
+            <a href="#" class="block w-64 mx-auto bg-pixl-dark/50 border border-pixl/50 px-4 py-1.5 text-pixl text-center hover:bg-pixl-dark/60 active:bg-pixl-dark/75 hover:border-pixl/60 active:border-pixl/75">
+              Sign in with Google
+            </a>
+            <a href="#" class="block w-64 mx-auto bg-pixl-dark/50 border border-pixl/50 px-4 py-1.5 text-pixl text-center hover:bg-pixl-dark/60 active:bg-pixl-dark/75 hover:border-pixl/60 active:border-pixl/75">
+              Sign in with Apple
+            </a>
+
+            <p class="text-sm">or</p>
+
+            <!-- Primary CTA -->
+            <a href="#" class="block w-64 mx-auto bg-pixl border border-transparent px-4 py-1.5 text-pixl-dark text-center hover:bg-pixl/90 active:bg-pixl/95">
+              Create an account
+            </a>
+
+            <!-- Sign in link -->
+            <p class="mt-6 text-left text-sm">
+              Already have an account? <a href="#" class="text-pixl">Sign in</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- Fixed footer and animated "white noise" band -->
